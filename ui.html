@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PyTubeDownloader</title>
+    <link rel="stylesheet" href="bulma.css">
+    <link rel="stylesheet" href="ui.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <h1 class="title">PyTubeDownloader</h1>
+            <br>
+            <div class="field has-addons">
+                <div class="control is-expanded">
+                    <input class="input input-elem is-primary" type="url" id="url_input" placeholder="Video URL">
+                </div>
+                <div class="control">
+                    <button class="button is-primary" type="button" onclick="onFetchQualities()">Fetch available
+                        qualities</button>
+                </div>
+            </div>
+            <br>
+            <div class="field">
+                <div class="control is-expanded">
+                    <div class="select is-primary is-fullwidth">
+                        <select class="input-elem" id="quality_select">
+                            <option value="0" selected>Highest available quality</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="control">
+                <button class="button is-primary is-outlined is-fullwidth" type="button"
+                    onclick="onDownload()">Download</button>
+            </div>
+            <br>
+            <progress class="progress is-primary is-medium visible hidden" id="prog_elem" value="0" max="100"></progress>
+        </div>
+    </div>
+    <script src="ui.js"></script>
+</body>
+
+</html>
